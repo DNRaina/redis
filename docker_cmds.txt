@@ -1,0 +1,14 @@
+Some Docker commands for the ease of use -
+
+
+1. docker pull redis 
+-> pulls the official image of redis
+
+2. docker run --name my-redis -p 6379:6379 -d redis
+
+6379 is the default port - I binded it to the same port of the machine. This command runs the redis server inside the container
+
+3. docker exec -it my-redis redis-cli ping
+
+it should reply with "PONG"  - redis-cli is the utility we use to talk to the server
+This command executes the "redis-cli ping" command inside the my-redis server we just started
